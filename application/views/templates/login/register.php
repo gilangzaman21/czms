@@ -6,7 +6,7 @@
 
 <head>
 	<meta charset="utf-8" />
-	<title>Color Admin | Register Page</title>
+	<title>Customized Management System | Register Page</title>
 	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
 	<meta content="" name="description" />
 	<meta content="" name="author" />
@@ -41,10 +41,16 @@
                     <img src="<?php echo base_url('assets'); ?>/img/login-bg/bg-8.jpg" alt="" />
                 </div>
                 <div class="news-caption">
-                    <h4 class="caption-title"><i class="fa fa-edit text-success"></i> Announcing the Color Admin app</h4>
-                    <p>
-                        As a Color Admin Apps administrator, you use the Color Admin console to manage your organization’s account, such as add new users, manage security settings, and turn on the services you want your team to access.
-                    </p>
+                    <div class="pull-left">
+                        <span class="fa-stack fa-3x text-success">
+                            <i class="fa fa-circle-o-notch fa-stack-2x"></i>
+                            <i class="fa fa-paint-brush fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </div>
+                    <h4 class="caption-title">
+                        &nbsp; Customized Management System
+                    </h4>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Easy Way For Web Based Application Environment.</p>
                 </div>
             </div>
             <!-- end news-feed -->
@@ -52,8 +58,8 @@
             <div class="right-content">
                 <!-- begin register-header -->
                 <h1 class="register-header">
-                    Sign Up
-                    <small>Create your Color Admin Account. It’s free and always will be.</small>
+                    CzMS Register Page
+                    <small>Create your CzMS Member Account. It’s free and always will be.</small>
                 </h1>
                 <!-- end register-header -->
                 <!-- begin register-content -->
@@ -97,11 +103,11 @@
                             <button type="submit" class="btn btn-primary btn-block btn-lg">Sign Up</button>
                         </div>
                         <div class="m-t-20 m-b-40 p-b-40">
-                            Already a member? Click <a href="login_v3.html">here</a> to login.
+                            Already a member? Click <a href="<?= base_url('login')  ?>">here</a> to login.
                         </div>
                         <hr />
                         <p class="text-center text-inverse">
-                            &copy; Color Admin All Right Reserved 2015
+                            &copy; CzMS All Right Reserved 2015
                         </p>
                     </form>
                 </div>

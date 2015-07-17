@@ -24,7 +24,7 @@ $string = "<div class=\"panel panel-inverse\" data-sortable-id=\"table-basic-2\"
                                 <a href=\"javascript:;\" class=\"btn btn-xs btn-icon btn-circle btn-success\" data-click=\"panel-reload\"><i class=\"fa fa-repeat\"></i></a>
                                 <a href=\"javascript:;\" class=\"btn btn-xs btn-icon btn-circle btn-warning\" data-click=\"panel-collapse\"><i class=\"fa fa-minus\"></i></a>
                             </div>
-                            <h4 class=\"panel-title\">".ucfirst($table)." <?php echo \$button ?></h4>
+                            <h4 class=\"panel-title\">".strtoupper($table)." <?php echo \$button ?></h4>
                         </div>
                         <div class=\"panel-body\">
                             <form action=\"<?php echo \$action; ?>\" method=\"post\">";
@@ -36,13 +36,13 @@ if (mysql_num_rows($result2) > 0)
         if ($row1["DATA_TYPE"] == 'text')
         {
         $string .= "\n\t    <div class=\"form-group\">
-                <label for=\"".$row1["COLUMN_NAME"]."\">".ucfirst($row1["COLUMN_NAME"])." <?php echo form_error('".$row1["COLUMN_NAME"]."') ?></label>
+                <label for=\"".$row1["COLUMN_NAME"]."\">".strtoupper($row1["COLUMN_NAME"])." <?php echo form_error('".$row1["COLUMN_NAME"]."') ?></label>
                 <textarea class=\"form-control\" rows=\"3\" name=\"".$row1["COLUMN_NAME"]."\" id=\"".$row1["COLUMN_NAME"]."\" placeholder=\"".$row1["COLUMN_NAME"]."\"><?php echo $".$row1["COLUMN_NAME"]."; ?></textarea>
             </div>";
         } else
         {
         $string .= "\n\t    <div class=\"form-group\">
-                <label for=\"".$row1["DATA_TYPE"]."\">".ucfirst($row1["COLUMN_NAME"])." <?php echo form_error('".$row1["COLUMN_NAME"]."') ?></label>
+                <label for=\"".$row1["DATA_TYPE"]."\">".strtoupper($row1["COLUMN_NAME"])." <?php echo form_error('".$row1["COLUMN_NAME"]."') ?></label>
                 <input type=\"text\" class=\"form-control\" name=\"".$row1["COLUMN_NAME"]."\" id=\"".$row1["COLUMN_NAME"]."\" placeholder=\"".$row1["COLUMN_NAME"]."\" value=\"<?php echo $".$row1["COLUMN_NAME"]."; ?>\" />
             </div>";
         }

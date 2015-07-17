@@ -21,11 +21,10 @@
                     <thead>
                         <tr>
                             <th>No</th>
-		<th>User_username</th>
-		<th>User_password</th>
-		<th>User_last_login</th>
-		<th>User_rules</th>
-		<th>Action</th>
+		<th>USERNAME</th>
+		<th>LAST LOGIN</th>
+		<th>RULES</th>
+		<th>ACTION</th>
             </tr>
                 
         </thead>
@@ -50,13 +49,13 @@
                 tableTools: {
                     sSwfPath: "<?php echo base_url('assets'); ?>/plugins/DataTables/swf/copy_csv_xls_pdf.swf"
                 },
-                lengthMenu: [20, 40, 60]
+                lengthMenu: [10, 20, 30, 40, 50, 100]
             });
         } else {
             var e = $("#data-table").DataTable({
                 ajax: "<?php echo base_url('protected'); ?>/user/getJson",
                 dom: '<"clear">frtip',
-                lengthMenu: [20, 40, 60]
+                lengthMenu: [10, 20, 30, 40, 50, 100]
             })
         }
     }

@@ -6,7 +6,7 @@
 
 <head>
 	<meta charset="utf-8" />
-	<title>Color Admin | Login Page</title>
+	<title>Customized Management System | Login Page</title>
 	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
 	<meta content="" name="description" />
 	<meta content="" name="author" />
@@ -42,11 +42,18 @@
                 <div class="news-image">
                     <img src="<?php echo base_url('assets'); ?>/img/login-bg/bg-7.jpg" data-id="login-cover-image" alt="" />
                 </div>
+
                 <div class="news-caption">
-                    <h4 class="caption-title"><i class="fa fa-diamond text-success"></i> Announcing the Color Admin app</h4>
-                    <p>
-                        Download the Color Admin app for iPhone®, iPad®, and Android™. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </p>
+                    <div class="pull-left">
+                        <span class="fa-stack fa-3x text-success">
+                            <i class="fa fa-circle-o-notch fa-stack-2x"></i>
+                            <i class="fa fa-paint-brush fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </div>
+                    <h4 class="caption-title">
+                        &nbsp; Customized Management System
+                    </h4>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Easy Way For Web Based Application Environment.</p>
                 </div>
             </div>
             <!-- end news-feed -->
@@ -55,8 +62,12 @@
                 <!-- begin login-header -->
                 <div class="login-header">
                     <div class="brand">
-                        <span class="logo"></span> Color Admin
-                        <small>responsive bootstrap 3 admin template</small>
+                        <span class="fa-stack fa-1x text-success pull-left">
+                            <i class="fa fa-circle-o-notch fa-stack-2x"></i>
+                            <i class="fa fa-paint-brush fa-stack-1x"></i>
+                        </span>
+                        &nbsp;CzMS Login
+                        <small>&nbsp;&nbsp;Customized Login System</small>
                     </div>
                     <div class="icon">
                         <i class="fa fa-sign-in"></i>
@@ -85,7 +96,7 @@
                         </div>
                         <hr />
                         <p class="text-center text-inverse">
-                            &copy; Color Admin All Right Reserved 2015
+                            &copy; CzMS All Right Reserved 2015
                         </p>
                     </form>
                 </div>

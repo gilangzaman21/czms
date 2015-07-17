@@ -78,7 +78,7 @@ if (isset($_POST['table'])) {
 <!doctype html>
 <html>
     <head>
-        <title>Codeigniter CRUD Generator</title>
+        <title>CZGen ~ CZMS CRUD Generator</title>
         <link rel="stylesheet" href="lib/bootstrap.min.css"/>
         <style>
             body{
@@ -95,7 +95,7 @@ if (isset($_POST['table'])) {
             <div class="col-md-3">
                 <form action="index.php" method="post">
                     <div class="form-group">
-                        <input onkeyup="setname()" id="table" type="text" name="table" value="<?php echo isset($_POST['table']) ? $_POST['table'] : '' ?>" class="form-control" placeholder="Input Table Name" />
+                        <input onkeyup="setname()" id="table" type="text" name="table" value="<?php echo isset($_POST['table']) ? $_POST['table'] : '' ?>" class="form-control" placeholder="Masukan Nama Table" />
                     </div>
                     <hr style="margin-bottom: 5px; margin-top: 5px">
                     <div class="checkbox">
@@ -107,12 +107,12 @@ if (isset($_POST['table'])) {
                     </div>
                     <hr style="margin-bottom: 10px; margin-top: 10px">
                     <div class="form-group">
-                        <label>Custom Controller Name</label>
-                        <input type="text" id="controller" name="controller" value="<?php echo isset($_POST['controller']) ? $_POST['controller'] : '' ?>" class="form-control" placeholder="Controller Name" />
+                        <label>Custom Controller</label>
+                        <input type="text" id="controller" name="controller" value="<?php echo isset($_POST['controller']) ? $_POST['controller'] : '' ?>" class="form-control" placeholder="Nama Controller" />
                     </div>
                     <div class="form-group">
-                        <label>Custom Model Name</label>
-                        <input type="text" id="model" name="model" value="<?php echo isset($_POST['model']) ? $_POST['model'] : '' ?>" class="form-control" placeholder="Controller Name" />
+                        <label>Custom Model</label>
+                        <input type="text" id="model" name="model" value="<?php echo isset($_POST['model']) ? $_POST['model'] : '' ?>" class="form-control" placeholder="Nama Model" />
                     </div>
 
                     <div class="form-group">
@@ -138,14 +138,14 @@ if (isset($_POST['table'])) {
                 ?>
             </div>
             <div class="col-md-9">
-                <h3 style="margin-top: 0px">Selamat Datang di <a target="_blank" href="http://warnai.co.id">Warnai Content Management</a></h3>
+                <h3 style="margin-top: 0px">Selamat Datang di <a target="_blank" href="http://czms-id.com">Customized Management System</a> CRUD Generator</h3>
                 <p><strong>About :</strong></p>
                 <p>
                     Warnai Content Management, Merumakan Content Management System (CMS) Based On Codeigniter, Dengan Mengutamakan Development Environment Bagi Developer
                     Mempermudah dan Mempercepat Developer Membuat System Aplikasi Dengan Fokus Pada Alur Proses Data. dan Juga Sebagai Alat Prototype
                     Untuk Agile Method Development
                 </p>
-                <small>* Generator CRUD Ini Di Adaptasi Pada Generator <a target="_blank" href="http://harviacode.com"><b>harviacode.com</b></a> </small>
+                <small>* Generator CRUD Ini Di Adaptasi dari Generator <a target="_blank" href="http://harviacode.com"><b>harviacode.com</b></a> </small>
                 <p><strong>Bagaimana Cara Bekerja CMS Ini :</strong></p>
                 <ul>
                     <li>Ganti Database Setting Pada _crudgenerator/lib/config.php dan Pada Application/config/database.php.</li>

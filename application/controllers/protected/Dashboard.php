@@ -21,11 +21,11 @@ class Dashboard extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-        // $this->general->cekUserLogin();
+        $this->general->cekUserLogin();
 	}
 
 	public function index()
 	{
-		$this->template->load('templates/admin/template','welcome_message');
+		$this->template->load('templates/admin/template','protected/dashboard');
 	}
 }

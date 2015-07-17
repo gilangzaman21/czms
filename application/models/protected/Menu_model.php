@@ -57,6 +57,7 @@ class Menu_model extends CI_Model
 	$this->db->or_like('icon', $keyword);
 	$this->db->or_like('link', $keyword);
 	$this->db->or_like('parent', $keyword);
+	$this->db->or_like('rules', $keyword);
 	$this->db->or_like('aktif', $keyword);
 	$this->db->from($this->table);
         return $this->db->count_all_results();
@@ -71,6 +72,7 @@ class Menu_model extends CI_Model
 	$this->db->or_like('icon', $keyword);
 	$this->db->or_like('link', $keyword);
 	$this->db->or_like('parent', $keyword);
+	$this->db->or_like('rules', $keyword);
 	$this->db->or_like('aktif', $keyword);
 	$this->db->limit($limit, $start);
         return $this->db->get($this->table)->result();

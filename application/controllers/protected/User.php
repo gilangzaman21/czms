@@ -182,20 +182,21 @@ class User extends CI_Controller
 
         $no = 1;
         foreach ($this->user_model->get_json() as $rw) {
-                    $data[]= array(
-                        $no++,
-        
-	$rw->user_username,
-	$rw->user_password,
-	$rw->user_last_login,
-	$rw->user_rules,
-	"<a href='".base_url('protected/user/read')."/$rw->id' class=\"btn btn-xs btn-icon btn-circle btn-warning\"><i class=\"fa fa-eye\"></i></a> <a href='".base_url('protected/user/update')."/$rw->id' class=\"btn btn-xs btn-icon btn-circle btn-success\"><i class=\"fa fa-edit\"></i></a> <a href='".base_url('protected/user/delete')."/$rw->id' onclick=\"javasciprt: return confirm('Anda Yakin ?')\" class=\"btn btn-xs btn-icon btn-circle btn-danger\"><i class=\"fa fa-times\"></i></a>",
-    );
-    $row = array(
-                'aaData' => $data
+            $data[]= array(
+                $no++,
+            	$rw->user_username,
+            	$rw->user_last_login,
+            	$rw->user_rules,
+            	"<a href='".base_url('protected/user/read')."/$rw->id' class=\"btn btn-xs btn-icon btn-circle btn-warning\"><i class=\"fa fa-eye\"></i></a> <a href='".base_url('protected/user/update')."/$rw->id' class=\"btn btn-xs btn-icon btn-circle btn-success\"><i class=\"fa fa-edit\"></i></a> <a href='".base_url('protected/user/delete')."/$rw->id' onclick=\"javasciprt: return confirm('Anda Yakin ?')\" class=\"btn btn-xs btn-icon btn-circle btn-danger\"><i class=\"fa fa-times\"></i></a>",
             );
-        $this->output->set_content_type('application/json')->set_output(json_encode($row));
-}}
+            
+            $row = array(
+                    'aaData' => $data
+            );
+            
+            $this->output->set_content_type('application/json')->set_output(json_encode($row));
+        }
+    }
 
     function _rules() 
     {

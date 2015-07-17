@@ -4,7 +4,12 @@
 			<div class="container-fluid">
 				<!-- begin mobile sidebar expand / collapse button -->
 				<div class="navbar-header">
-					<a href="index-2.html" class="navbar-brand"><span class="navbar-logo"></span> Color Admin</a>
+					<a href="index-2.html" class="navbar-brand">
+					<span class="fa-stack fa-1x text-white">
+                        <i class="fa fa-circle-o-notch fa-stack-2x"></i>
+                        <i class="fa fa-paint-brush fa-stack-1x"></i>
+                    </span>
+					<strong>&nbsp;&nbsp;Dashboard</strong></a>
 					<button type="button" class="navbar-toggle" data-click="sidebar-toggled">
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
@@ -94,7 +99,7 @@
 							<li><a href="javascript:;">Calendar</a></li>
 							<li><a href="javascript:;">Setting</a></li>
 							<li class="divider"></li>
-							<li><a href="javascript:;">Log Out</a></li>
+							<li><a href="<?= base_url('logout') ?>">Log Out</a></li>
 						</ul>
 					</li>
 				</ul>

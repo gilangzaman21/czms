@@ -6,7 +6,7 @@
 
 <head>
 	<meta charset="utf-8" />
-	<title>Color Admin | Dashboard</title>
+	<title>HalloWorld | Customized Management System version 1.1.0</title>
 	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
 	<meta content="" name="description" />
 	<meta content="" name="author" />
@@ -67,6 +67,12 @@
 			<!-- end row -->
 		</div>
 		<!-- end #content -->
+
+		<!-- begin #footer -->
+		<div id="footer" class="footer">
+		    &copy; 2015 CzMS <a href="http://czms-id.com" title="">Customized Management System</a>. All Rights Reserved
+		</div>
+		<!-- end #footer -->
 
 		<!-- begin scroll to top btn -->
 		<a href="javascript:;" class="btn btn-icon btn-circle btn-success btn-scroll-to-top fade" data-click="scroll-top"><i class="fa fa-angle-up"></i></a>

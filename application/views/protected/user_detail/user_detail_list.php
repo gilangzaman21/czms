@@ -8,7 +8,7 @@
                 <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
                 <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
             </div>
-            <h4 class="panel-title">User_detail</h4>
+            <h4 class="panel-title">USER_DETAIL</h4>
         </div>
         <div class="row">
             <div style="margin:10px;padding:10px;">
@@ -21,11 +21,11 @@
                     <thead>
                         <tr>
                             <th>No</th>
-		<th>User_id</th>
-		<th>User_detail_fullname</th>
-		<th>User_detail_email</th>
-		<th>User_detail_picture</th>
-		<th>Action</th>
+		<th>USER_ID</th>
+		<th>USER_DETAIL_FULLNAME</th>
+		<th>USER_DETAIL_EMAIL</th>
+		<th>USER_DETAIL_PICTURE</th>
+		<th>ACTION</th>
             </tr>
                 
         </thead>
@@ -50,13 +50,13 @@
                 tableTools: {
                     sSwfPath: "<?php echo base_url('assets'); ?>/plugins/DataTables/swf/copy_csv_xls_pdf.swf"
                 },
-                lengthMenu: [20, 40, 60]
+                lengthMenu: [10, 20, 30, 40, 50, 100]
             });
         } else {
             var e = $("#data-table").DataTable({
                 ajax: "<?php echo base_url('protected'); ?>/user_detail/getJson",
                 dom: '<"clear">frtip',
-                lengthMenu: [20, 40, 60]
+                lengthMenu: [10, 20, 30, 40, 50, 100]
             })
         }
     }

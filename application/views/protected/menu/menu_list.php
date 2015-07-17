@@ -8,7 +8,7 @@
                 <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
                 <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
             </div>
-            <h4 class="panel-title">Menu</h4>
+            <h4 class="panel-title">MENU</h4>
         </div>
         <div class="row">
             <div style="margin:10px;padding:10px;">
@@ -21,13 +21,14 @@
                     <thead>
                         <tr>
                             <th>No</th>
-		<th>Posisi</th>
-		<th>Nama_menu</th>
-		<th>Icon</th>
-		<th>Link</th>
-		<th>Parent</th>
-		<th>Aktif</th>
-		<th>Action</th>
+		<th>POSISI</th>
+		<th>NAMA_MENU</th>
+		<th>ICON</th>
+		<th>LINK</th>
+		<th>PARENT</th>
+		<th>RULES</th>
+		<th>AKTIF</th>
+		<th>ACTION</th>
             </tr>
                 
         </thead>
@@ -52,13 +53,13 @@
                 tableTools: {
                     sSwfPath: "<?php echo base_url('assets'); ?>/plugins/DataTables/swf/copy_csv_xls_pdf.swf"
                 },
-                lengthMenu: [20, 40, 60]
+                lengthMenu: [10, 20, 30, 40, 50, 100]
             });
         } else {
             var e = $("#data-table").DataTable({
                 ajax: "<?php echo base_url('protected'); ?>/menu/getJson",
                 dom: '<"clear">frtip',
-                lengthMenu: [20, 40, 60]
+                lengthMenu: [10, 20, 30, 40, 50, 100]
             })
         }
     }

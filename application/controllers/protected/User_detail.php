@@ -206,7 +206,7 @@ class User_detail extends CI_Controller
 	$this->form_validation->set_rules('user_id', ' ', 'trim|required|numeric');
 	$this->form_validation->set_rules('user_detail_fullname', ' ', 'trim|required');
 	$this->form_validation->set_rules('user_detail_email', ' ', 'trim|required');
-	$this->form_validation->set_rules('user_detail_picture', ' ', 'trim|required');
+	$this->form_validation->set_rules('user_detail_picture', ' ', 'trim');
 
 	$this->form_validation->set_rules('id', 'id', 'trim');
 	$this->form_validation->set_error_delimiters('<span class="text-danger">', '</span>');

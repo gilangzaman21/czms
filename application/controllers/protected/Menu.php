@@ -11,7 +11,7 @@ class Menu extends CI_Controller
         $this->load->model('protected/menu_model');
         $this->load->library('form_validation');
         $this->general->cekUserLogin();
-        $this->general->cekRules('admin');
+        $this->general->cekRules('super_admin');
 
 
     }
@@ -85,6 +85,7 @@ class Menu extends CI_Controller
 		'icon' => $row->icon,
 		'link' => $row->link,
 		'parent' => $row->parent,
+		'rules' => $row->rules,
 		'aktif' => $row->aktif,
 	    );
             $this->template->load('templates/admin/template','protected/menu/menu_read', $data);
@@ -105,6 +106,7 @@ class Menu extends CI_Controller
 	    'icon' => set_value('icon'),
 	    'link' => set_value('link'),
 	    'parent' => set_value('parent'),
+	    'rules' => set_value('rules'),
 	    'aktif' => set_value('aktif'),
 	);
         $this->template->load('templates/admin/template','protected/menu/menu_form', $data);
@@ -123,6 +125,7 @@ class Menu extends CI_Controller
 		'icon' => $this->input->post('icon',TRUE),
 		'link' => $this->input->post('link',TRUE),
 		'parent' => $this->input->post('parent',TRUE),
+		'rules' => $this->input->post('rules',TRUE),
 		'aktif' => $this->input->post('aktif',TRUE),
 	    );
 
@@ -146,6 +149,7 @@ class Menu extends CI_Controller
 		'icon' => set_value('icon', $row->icon),
 		'link' => set_value('link', $row->link),
 		'parent' => set_value('parent', $row->parent),
+		'rules' => set_value('rules', $row->rules),
 		'aktif' => set_value('aktif', $row->aktif),
 	    );
             $this->template->load('templates/admin/template','protected/menu/menu_form', $data);
@@ -168,6 +172,7 @@ class Menu extends CI_Controller
 		'icon' => $this->input->post('icon',TRUE),
 		'link' => $this->input->post('link',TRUE),
 		'parent' => $this->input->post('parent',TRUE),
+		'rules' => $this->input->post('rules',TRUE),
 		'aktif' => $this->input->post('aktif',TRUE),
 	    );
 
@@ -204,6 +209,7 @@ class Menu extends CI_Controller
 	$rw->icon,
 	$rw->link,
 	$rw->parent,
+	$rw->rules,
 	$rw->aktif,
 	"<a href='".base_url('protected/menu/read')."/$rw->id' class=\"btn btn-xs btn-icon btn-circle btn-warning\"><i class=\"fa fa-eye\"></i></a> <a href='".base_url('protected/menu/update')."/$rw->id' class=\"btn btn-xs btn-icon btn-circle btn-success\"><i class=\"fa fa-edit\"></i></a> <a href='".base_url('protected/menu/delete')."/$rw->id' onclick=\"javasciprt: return confirm('Anda Yakin ?')\" class=\"btn btn-xs btn-icon btn-circle btn-danger\"><i class=\"fa fa-times\"></i></a>",
     );
@@ -217,9 +223,10 @@ class Menu extends CI_Controller
     {
 	$this->form_validation->set_rules('posisi', ' ', 'trim|required|numeric');
 	$this->form_validation->set_rules('nama_menu', ' ', 'trim|required');
-	$this->form_validation->set_rules('icon', ' ', 'trim|required');
+	$this->form_validation->set_rules('icon', ' ', 'trim');
 	$this->form_validation->set_rules('link', ' ', 'trim|required');
-	$this->form_validation->set_rules('parent', ' ', 'trim|required|numeric');
+	$this->form_validation->set_rules('parent', ' ', 'trim');
+	$this->form_validation->set_rules('rules', ' ', 'trim');
 	$this->form_validation->set_rules('aktif', ' ', 'trim|required');
 
 	$this->form_validation->set_rules('id', 'id', 'trim');
