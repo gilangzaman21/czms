@@ -24,6 +24,9 @@ class Login extends CI_Controller {
 						$sessionData['user_is_login'] = TRUE;
 		                $sessionData['user_id'] = $is_login['id'];
 		                $sessionData['user_username'] = $is_login['user_username'];
+		                $sessionData['user_fullname'] = $is_login['user_fullname'];
+		                $sessionData['user_email'] = $is_login['user_email'];
+		                $sessionData['user_picture'] = $is_login['user_picture'];
 		                $sessionData['user_rules'] = $is_login['user_rules'];
 
 				        $this->session->set_userdata($sessionData);

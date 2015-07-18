@@ -11,7 +11,7 @@
                         <div class="panel-body">
                             <table class="table table-hover">
 	    <tr><td>POSISI</td><td><?php echo $posisi; ?></td></tr>
-	    <tr><td>NAMA_MENU</td><td><?php echo $nama_menu; ?></td></tr>
+	    <tr><td>NAMA MENU</td><td><?php echo $nama_menu; ?></td></tr>
 	    <tr><td>ICON</td><td><?php echo $icon; ?></td></tr>
 	    <tr><td>LINK</td><td><?php echo $link; ?></td></tr>
 	    <tr><td>PARENT</td><td><?php echo $parent; ?></td></tr>

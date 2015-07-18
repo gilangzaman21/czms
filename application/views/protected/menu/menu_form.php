@@ -14,7 +14,7 @@
                 <input type="text" class="form-control" name="posisi" id="posisi" placeholder="posisi" value="<?php echo $posisi; ?>" />
             </div>
 	    <div class="form-group">
-                <label for="varchar">NAMA_MENU <?php echo form_error('nama_menu') ?></label>
+                <label for="varchar">NAMA MENU <?php echo form_error('nama_menu') ?></label>
                 <input type="text" class="form-control" name="nama_menu" id="nama_menu" placeholder="nama_menu" value="<?php echo $nama_menu; ?>" />
             </div>
 	    <div class="form-group">

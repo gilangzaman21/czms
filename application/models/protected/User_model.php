@@ -52,10 +52,15 @@ class User_model extends CI_Model
     // get search total rows
     function search_total_rows($keyword = NULL) {
         $this->db->like('id', $keyword);
+	$this->db->or_like('user_fullname', $keyword);
+	$this->db->or_like('user_email', $keyword);
+	$this->db->or_like('user_picture', $keyword);
 	$this->db->or_like('user_username', $keyword);
 	$this->db->or_like('user_password', $keyword);
 	$this->db->or_like('user_last_login', $keyword);
+	$this->db->or_like('user_token', $keyword);
 	$this->db->or_like('user_rules', $keyword);
+	$this->db->or_like('status', $keyword);
 	$this->db->from($this->table);
         return $this->db->count_all_results();
     }
@@ -64,10 +69,15 @@ class User_model extends CI_Model
     function search_index_limit($limit, $start = 0, $keyword = NULL) {
         $this->db->order_by($this->id, $this->order);
         $this->db->like('id', $keyword);
+	$this->db->or_like('user_fullname', $keyword);
+	$this->db->or_like('user_email', $keyword);
+	$this->db->or_like('user_picture', $keyword);
 	$this->db->or_like('user_username', $keyword);
 	$this->db->or_like('user_password', $keyword);
 	$this->db->or_like('user_last_login', $keyword);
+	$this->db->or_like('user_token', $keyword);
 	$this->db->or_like('user_rules', $keyword);
+	$this->db->or_like('status', $keyword);
 	$this->db->limit($limit, $start);
         return $this->db->get($this->table)->result();
     }

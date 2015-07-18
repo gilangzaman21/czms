@@ -26,7 +26,7 @@ $string = "
                 <a href=\"javascript:;\" class=\"btn btn-xs btn-icon btn-circle btn-success\" data-click=\"panel-reload\"><i class=\"fa fa-repeat\"></i></a>
                 <a href=\"javascript:;\" class=\"btn btn-xs btn-icon btn-circle btn-warning\" data-click=\"panel-collapse\"><i class=\"fa fa-minus\"></i></a>
             </div>
-            <h4 class=\"panel-title\">".strtoupper($table)."</h4>
+            <h4 class=\"panel-title\">".str_replace("_"," ",ucwords($table))."</h4>
         </div>
         <div class=\"row\">
             <div style=\"margin:10px;padding:10px;\">
@@ -45,7 +45,7 @@ if (mysql_num_rows($result2) > 0)
 {
     while ($row1 = mysql_fetch_assoc($result2))
     {
-        $string .= "\n\t\t<th>" . strtoupper($row1['COLUMN_NAME']) . "</th>";
+        $string .= "\n\t\t<th>" . str_replace("_"," ",strtoupper($row1['COLUMN_NAME'])) . "</th>";
     }
 }
 $string .= "\n\t\t<th>ACTION</th>

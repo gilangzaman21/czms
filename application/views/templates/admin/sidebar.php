@@ -6,10 +6,10 @@
 		<ul class="nav">
 			<li class="nav-profile">
 				<div class="image">
-					<a href="javascript:;"><img src="<?php echo base_url('assets'); ?>/img/user-13.jpg" alt="" /></a>
+					<a href="javascript:;"><img src="<?php echo base_url(); ?>uploads/user/<?= $this->session->userdata('user_picture'); ?>" alt="<?= $this->session->userdata('user_fullname'); ?>" /></a>
 				</div>
 				<div class="info">
-					Sean Ngu
+					<?= $this->session->userdata('user_fullname'); ?>
 					<small>
 					<?= 
 						strtoupper($this->session->userdata('user_rules')); 

@@ -8,7 +8,7 @@
                 <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
                 <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
             </div>
-            <h4 class="panel-title">User</h4>
+            <h4 class="panel-title">USER</h4>
         </div>
         <div class="row">
             <div style="margin:10px;padding:10px;">
@@ -21,9 +21,13 @@
                     <thead>
                         <tr>
                             <th>No</th>
+		<th>FULLNAME</th>
+		<th>EMAIL</th>
+		<th>PICTURE</th>
 		<th>USERNAME</th>
 		<th>LAST LOGIN</th>
 		<th>RULES</th>
+		<th>STATUS</th>
 		<th>ACTION</th>
             </tr>
                 

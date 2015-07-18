@@ -22,7 +22,7 @@
                         <tr>
                             <th>No</th>
 		<th>POSISI</th>
-		<th>NAMA_MENU</th>
+		<th>NAMA MENU</th>
 		<th>ICON</th>
 		<th>LINK</th>
 		<th>PARENT</th>

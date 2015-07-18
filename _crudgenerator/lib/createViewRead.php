@@ -24,7 +24,7 @@ $string = "
                                 <a href=\"javascript:;\" class=\"btn btn-xs btn-icon btn-circle btn-success\" data-click=\"panel-reload\"><i class=\"fa fa-repeat\"></i></a>
                                 <a href=\"javascript:;\" class=\"btn btn-xs btn-icon btn-circle btn-warning\" data-click=\"panel-collapse\"><i class=\"fa fa-minus\"></i></a>
                             </div>
-                            <h4 class=\"panel-title\">".strtoupper($table)." Read</h4>
+                            <h4 class=\"panel-title\">".str_replace("_"," ",ucwords($table))." Read</h4>
                         </div>
                         <div class=\"panel-body\">
                             <table class=\"table table-hover\">";
@@ -34,7 +34,7 @@ if (mysql_num_rows($result2) > 0)
 {
     while ($row1 = mysql_fetch_assoc($result2))
     {
-        $string .= "\n\t    <tr><td>".strtoupper($row1["COLUMN_NAME"])."</td><td><?php echo $".$row1["COLUMN_NAME"]."; ?></td></tr>";
+        $string .= "\n\t    <tr><td>".str_replace("_"," ",strtoupper($row1['COLUMN_NAME']))."</td><td><?php echo $".$row1["COLUMN_NAME"]."; ?></td></tr>";
     }
 }
 $string .= "\n\t    <tr><td></td><td><a href=\"<?php echo site_url('protected/".$controller."') ?>\" class=\"btn btn-default\">Cancel</button></td></tr>";
