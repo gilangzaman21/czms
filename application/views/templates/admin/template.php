@@ -20,12 +20,11 @@
 	<link href="<?php echo base_url('assets'); ?>/css/style.min.css" rel="stylesheet" />
 	<link href="<?php echo base_url('assets'); ?>/css/style-responsive.min.css" rel="stylesheet" />
 	<link href="<?php echo base_url('assets'); ?>/css/theme/default.css" rel="stylesheet" id="theme" />
+	<link href="<?php echo base_url('assets'); ?>/plugins/select2/dist/css/select2.min.css" rel="stylesheet" />
+	<link href="<?php echo base_url('assets'); ?>/plugins/bootstrap-select/bootstrap-select.min.css" rel="stylesheet" />
 	<!-- ================== END BASE CSS STYLE ================== -->
 	
 	<!-- ================== BEGIN PAGE LEVEL STYLE ================== -->
-	<link href="<?php echo base_url('assets'); ?>/plugins/jquery-jvectormap/jquery-jvectormap-1.2.2.css" rel="stylesheet" />
-	<link href="<?php echo base_url('assets'); ?>/plugins/bootstrap-datepicker/css/datepicker.css" rel="stylesheet" />
-	<link href="<?php echo base_url('assets'); ?>/plugins/bootstrap-datepicker/css/datepicker3.css" rel="stylesheet" />
     <link href="<?php echo base_url('assets'); ?>/plugins/gritter/css/jquery.gritter.css" rel="stylesheet" />
     <link href="<?php echo base_url('assets'); ?>/plugins/DataTables/css/data-table.css" rel="stylesheet" />
 	<!-- ================== END PAGE LEVEL STYLE ================== -->
@@ -96,15 +95,10 @@
 	<!-- ================== END BASE JS ================== -->
 	
 	<!-- ================== BEGIN PAGE LEVEL JS ================== -->
+	<script src="<?php echo base_url('assets'); ?>/plugins/bootstrap-select/bootstrap-select.min.js"></script>
+	<script src="<?php echo base_url('assets'); ?>/plugins/select2/dist/js/select2.min.js"></script>
 	<script src="<?php echo base_url('assets'); ?>/plugins/gritter/js/jquery.gritter.js"></script>
-	<script src="<?php echo base_url('assets'); ?>/plugins/flot/jquery.flot.min.js"></script>
-	<script src="<?php echo base_url('assets'); ?>/plugins/flot/jquery.flot.time.min.js"></script>
-	<script src="<?php echo base_url('assets'); ?>/plugins/flot/jquery.flot.resize.min.js"></script>
-	<script src="<?php echo base_url('assets'); ?>/plugins/flot/jquery.flot.pie.min.js"></script>
 	<script src="<?php echo base_url('assets'); ?>/plugins/sparkline/jquery.sparkline.js"></script>
-	<script src="<?php echo base_url('assets'); ?>/plugins/jquery-jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
-	<script src="<?php echo base_url('assets'); ?>/plugins/jquery-jvectormap/jquery-jvectormap-world-mill-en.js"></script>
-	<script src="<?php echo base_url('assets'); ?>/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
 	<script src="<?php echo base_url('assets'); ?>/js/dashboard.min.js"></script>
 	<script src="<?php echo base_url('assets'); ?>/js/apps.min.js"></script>
 
@@ -120,6 +114,7 @@
 	<script>
 		$(document).ready(function() {
 			App.init();
+			handleSelectpicker();
 			<?php if ($this->session->flashdata('message_text') != NULL): ?>
 	            handleDashboardGritterNotification();
 			<?php endif; ?>
@@ -129,6 +124,10 @@
 		});
 	</script>
 	<script>
+
+	  var handleSelectpicker=function(){
+	  	$(".selectpicker").selectpicker("render")
+	  }
 
       var handleDashboardGritterNotification=function(){
       	$(window).load(function(){

@@ -32,7 +32,7 @@
 	    
 	    <div class="form-group">
                 <label for="enum">USER RULES <?php echo form_error('user_rules') ?></label>
-                <select class="form-control" name="user_rules" id="user_rules">
+                <select name="user_rules" id="user_rules" class="form-control selectpicker" data-size="10" data-live-search="true" data-style="btn-white">
                     <option value="<?php echo $user_rules; ?>">-- SET RULES --</option>
                     <option value="registered_user">Registered User</option>
                     <option value="admin">Administrator</option>
@@ -43,7 +43,7 @@
 
 	    <div class="form-group">
                 <label for="enum">STATUS <?php echo form_error('status') ?></label>
-                <select class="form-control" name="status" id="status">
+                <select name="status" id="status" class="form-control selectpicker" data-size="10" data-live-search="true" data-style="btn-white">
                     <option value="<?php echo $status; ?>">-- SET STATUS --</option>
                     <option value="aktif">Aktif</option>
                     <option value="blokir">Blokir</option>

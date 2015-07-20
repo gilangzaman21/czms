@@ -7,7 +7,7 @@ function text($name,$placeholder,$class,$value=null,$tags=null)
 function dropdown($name,$table,$field,$pk,$kondisi,$selected=null,$data=null,$tags=null)
 {
     $CI =& get_instance();
-   echo"<select name='".$name."' class='form-control'>";
+   echo"<select name=\"".$name."\" class=\"form-control selectpicker\" data-size=\"10\" data-live-search=\"true\" data-style=\"btn-white\">";
         if(!empty($data))
         {
             foreach ($data as $data_value => $id)

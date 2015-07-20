@@ -31,7 +31,7 @@
         </div>
         <div class="form-group">
                 <label for="enum">RULES <?php echo form_error('rules') ?></label>
-                <select class="form-control" name="rules" id="rules">
+                <select name="rules" id="rules" class="form-control selectpicker" data-size="10" data-live-search="true" data-style="btn-white">
                     <option value="<?php echo $rules; ?>">-- RULES --</option>
                     <option value="registered_user">REGISTERED USER</option>
                     <option value="admin">ADMIN</option>
@@ -40,7 +40,7 @@
             </div>
         <div class="form-group">
             <label for="enum">AKTIF <?php echo form_error('aktif') ?></label>
-            <select class="form-control" name="aktif" id="aktif">
+            <select name="aktif" id="aktif" class="form-control selectpicker" data-size="10" data-live-search="true" data-style="btn-white">
                 <option value="<?php echo $aktif; ?>">-- Aktif --</option>
                 <option value="ya">Ya</option>
                 <option value="tidak">Tidak</option>
