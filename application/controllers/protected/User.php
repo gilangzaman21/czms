@@ -224,16 +224,16 @@ class User extends CI_Controller
             }
 
             $data = array(
-		'user_fullname' => $this->input->post('user_fullname',TRUE),
-		'user_email' => $this->input->post('user_email',TRUE),
-		'user_picture' => $filename,
-		'user_username' => $this->input->post('user_username',TRUE),
-		'user_password' => sha1(md5($this->input->post('user_password',TRUE))),
-		'user_last_login' => $this->input->post('user_last_login',TRUE),
-		'user_token' => $this->input->post('user_token',TRUE),
-		'user_rules' => $this->input->post('user_rules',TRUE),
-		'status' => $this->input->post('status',TRUE),
-	    );
+        		'user_fullname' => $this->input->post('user_fullname',TRUE),
+        		'user_email' => $this->input->post('user_email',TRUE),
+        		'user_picture' => $filename,
+        		'user_username' => $this->input->post('user_username',TRUE),
+        		'user_password' => sha1(md5($this->input->post('user_password',TRUE))),
+        		'user_last_login' => $this->input->post('user_last_login',TRUE),
+        		'user_token' => $this->input->post('user_token',TRUE),
+        		'user_rules' => $this->input->post('user_rules',TRUE),
+        		'status' => $this->input->post('status',TRUE),
+	       );
 
             $this->user_model->update($this->input->post('id', TRUE), $data);
             $this->session->set_flashdata('message_text', 'Update Record Success');
@@ -284,7 +284,7 @@ class User extends CI_Controller
 	$this->form_validation->set_rules('user_email', ' ', 'trim|required');
 	$this->form_validation->set_rules('user_picture', ' ', 'trim');
 	$this->form_validation->set_rules('user_username', ' ', 'trim|required');
-	$this->form_validation->set_rules('user_password', ' ', 'trim');
+	$this->form_validation->set_rules('user_password', ' ', 'trim|required');
 	$this->form_validation->set_rules('user_rules', ' ', 'trim|required');
 	$this->form_validation->set_rules('status', ' ', 'trim|required');
 

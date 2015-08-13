@@ -14,7 +14,7 @@
 	    <tr><td>USER EMAIL</td><td><?php echo $user_email; ?></td></tr>
 	    <tr><td>USER PICTURE</td><td><?php echo $user_picture; ?></td></tr>
 	    <tr><td>USER USERNAME</td><td><?php echo $user_username; ?></td></tr>
-	    <tr><td>USER PASSWORD</td><td><?php echo $user_password; ?></td></tr>
+	    <tr><td>USER PASSWORD</td><td>******</td></tr>
 	    <tr><td>USER LAST LOGIN</td><td><?php echo $user_last_login; ?></td></tr>
 	    <tr><td>USER RULES</td><td><?php echo $user_rules; ?></td></tr>
 	    <tr><td>STATUS</td><td><?php echo $status; ?></td></tr>

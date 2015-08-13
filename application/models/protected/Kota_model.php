@@ -25,8 +25,9 @@ class Kota_model extends CI_Model
     // get all
     function get_json()
     {
-        $this->db->order_by($this->id, $this->order);
-        return $this->db->get($this->table)->result();
+        // $this->db->order_by($this->id, $this->order);
+        // return $this->db->get($this->table)->result();
+        return $this->db->query("SELECT * FROM kota INNER JOIN provinsi ON kota.provinsiID = provinsi.provinsiID")->result();
     }
 
     // get data by id

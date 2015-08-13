@@ -6,7 +6,7 @@
 
 <head>
 	<meta charset="utf-8" />
-	<title>HalloWorld | Customized Management System version 1.1.0</title>
+	<title>Dashboard System | Customized Management System version 1.1.0</title>
 	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
 	<meta content="" name="description" />
 	<meta content="" name="author" />
@@ -105,6 +105,7 @@
 	<!-- Datatables -->
 
 	<!-- ================== BEGIN PAGE LEVEL JS ================== -->
+	<script src="<?php echo base_url('assets'); ?>/js/clock.js" type="text/javascript"></script>
 	<script src="<?php echo base_url('assets'); ?>/plugins/DataTables/js/jquery.dataTables.js"></script>
 	<script src="<?php echo base_url('assets'); ?>/plugins/DataTables/js/dataTables.tableTools.js"></script>
 	<!-- ================== END PAGE LEVEL JS ================== -->
@@ -115,6 +116,7 @@
 		$(document).ready(function() {
 			App.init();
 			handleSelectpicker();
+			startclock();
 			<?php if ($this->session->flashdata('message_text') != NULL): ?>
 	            handleDashboardGritterNotification();
 			<?php endif; ?>

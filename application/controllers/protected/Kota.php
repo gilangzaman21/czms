@@ -185,7 +185,7 @@ class Kota extends CI_Controller
                         $no++,
         
 	$rw->status,
-	$rw->provinsiID,
+	$rw->nama_provinsi,
 	$rw->nama_kota,
 	"<a href='".base_url('protected/kota/read')."/$rw->kotaID' class=\"btn btn-xs btn-icon btn-circle btn-warning\"><i class=\"fa fa-eye\"></i></a> <a href='".base_url('protected/kota/update')."/$rw->kotaID' class=\"btn btn-xs btn-icon btn-circle btn-success\"><i class=\"fa fa-edit\"></i></a> <a href='".base_url('protected/kota/delete')."/$rw->kotaID' onclick=\"javasciprt: return confirm('Anda Yakin ?')\" class=\"btn btn-xs btn-icon btn-circle btn-danger\"><i class=\"fa fa-times\"></i></a>",
     );

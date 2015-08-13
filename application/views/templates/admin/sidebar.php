@@ -14,13 +14,17 @@
 					<?= 
 						strtoupper($this->session->userdata('user_rules')); 
 					?>
+					<br><br><center><span class="clock"><span id="date"></span>, <span id="clock"></span></span></center>
 					</small>
+
 				</div>
+				
 			</li>
 		</ul>
 		<!-- end sidebar user -->
 		<!-- begin sidebar nav -->
 		<ul class="nav">
+			
 			<li class="nav-header">Navigation</li>
 			<?php
 				switch ($this->session->userdata('user_rules')) {

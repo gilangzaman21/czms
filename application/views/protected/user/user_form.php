@@ -27,7 +27,7 @@
             </div>
 	    <div class="form-group">
                 <label for="varchar">USER PASSWORD <?php echo form_error('user_password') ?></label>
-                <input type="text" class="form-control" name="user_password" id="user_password" placeholder="user_password" value="<?php echo $user_password; ?>" />
+                <input type="text" class="form-control" name="user_password" id="user_password" placeholder="user_password" />
             </div>
 	    
 	    <div class="form-group">
